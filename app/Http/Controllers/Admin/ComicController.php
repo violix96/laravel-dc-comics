@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Database\Eloquent\Model;
 
 class ComicController extends Controller
 {
@@ -13,16 +15,15 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
+        // dd($comics);
         return view('comics.index', compact('comics'));
     }
-
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -38,7 +39,11 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $comic = Comic::find($id);
+
+        // dd($comic);
+
+        return view('comics.show', compact('comic'));
     }
 
     /**
