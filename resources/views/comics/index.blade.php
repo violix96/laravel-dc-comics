@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
+@section('page-title')
+    Home-page
+@endsection
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
+@section('Tutti_i_fumetti')
     <h1>Tutti i fumetti</h1>
     <a href="{{ route('comics.create') }}">Crea un nuovo fumetto</a>
     <ul>
@@ -19,7 +11,4 @@
             <li><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></li>
         @endforeach
     </ul>
-
-</body>
-
-</html>
+@endsection

@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dettaglio fumetto</title>
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
+@extends('layouts.app')
+@section('page-title')
+    Show
+@endsection
+@section('show')
     <h1>{{ $comic->title }}</h1>
     <p>{{ $comic->description }}</p>
     <a href="{{ route('comics.index') }}">Torna alla Home</a>
-
-</body>
-
-</html>
+@endsection

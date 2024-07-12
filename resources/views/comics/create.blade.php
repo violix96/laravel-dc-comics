@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crea un nuovo Fumetto</title>
-    @vite('resources/js/app.js')
-</head>
-
-<body>
+@extends('layouts.app')
+@section('page-title')
+    Form
+@endsection
+@section('form')
     <div class="container py-5">
         <h1>
             Inserisci un nuovo fumetto
@@ -55,12 +48,10 @@
 
 
             <button class="btn btn-primary">Crea fumetto</button>
+
         </form>
+        <div class="my-5">
+            <a class="btn btn-primary text-white" href="{{ route('comics.index') }}">Torna alla Home</a>
+        </div>
     </div>
-
-
-
-
-</body>
-
-</html>
+@endsection
