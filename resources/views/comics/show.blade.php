@@ -19,7 +19,7 @@
                     <p class="card-text">{{ $comic->description }}</p>
                     <p class="card-text">Prezzo: {{ $comic->price }}</p>
                     <p class="card-text">{{ $comic->series }}</p>
-                    <p class="card-text">{{ $comic->sale_date }}</p>
+                    <p class="card-text">Data di uscita: {{ $comic->sale_date }}</p>
                     <p class="card-text">Tipo: {{ $comic->type }}</p>
                     <strong>Artists:</strong>
                     @foreach (json_decode($comic->artists) as $artist)
