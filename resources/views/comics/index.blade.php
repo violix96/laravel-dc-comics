@@ -4,11 +4,32 @@
 @endsection
 
 @section('Tutti_i_fumetti')
-    <h1>Tutti i fumetti</h1>
-    <a href="{{ route('comics.create') }}">Crea un nuovo fumetto</a>
-    <ul>
-        @foreach ($comics as $comic)
-            <li><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></li>
-        @endforeach
-    </ul>
+    <main>
+        <img class="jumbo" src="{{ Vite::asset('resources/img/panini-dc-banner.jpg') }}" alt="Logo">
+
+        <div class="container d-flex justify-content-center">
+            <button class="btn btn-primary mt-2 mb-2"><a href="{{ route('comics.create') }}">Aggiungi un nuovo
+                    fumetto</a></button>
+        </div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-4">
+                @foreach ($comics as $comic)
+                    <div class="col mb-4">
+                        <div class="card bg-dark text-white h-100">
+                            <a href="{{ route('comics.show', $comic->id) }}">
+                                <img class="card-img" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"
+                                    style="max-height: 150px; object-fit: cover;">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                    <h5 class="card-title">{{ $comic->title }}</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
+
+    </main>
 @endsection
