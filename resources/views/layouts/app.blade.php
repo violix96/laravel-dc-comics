@@ -13,6 +13,7 @@
     @include('comics.shared.header')
     @yield('Tutti_i_fumetti')
     @yield('form')
+    @yield('form-modifica')
     @yield('show')
     @include('comics.shared.footer')
 </body>

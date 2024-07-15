@@ -22,6 +22,8 @@
                                 {{-- <div class="card-img-overlay d-flex flex-column justify-content-end">
                                 </div> --}}
                                 <h5 class="card-title">{{ $comic->title }}</h5>
+                                <button class="btn btn-primary"><a
+                                        href="{{ route('comics.edit', $comic->id) }}">Modifica</a></button>
 
                             </a>
                         </div>
