@@ -7,6 +7,8 @@
 
         <div class="container mt-5">
 
+            <h1 class="title-show">Titolo: {{ $comic->title }}</h1>
+
             <div class="text-center">
                 <img class="card-img-bottom" src="{{ $comic->thumb }}" alt="Card image cap"
                     style="width: 20%; height: auto; object-fit: cover;">
@@ -32,10 +34,14 @@
                 </div>
             </div>
 
+            <a href="{{ route('comics.index') }}" style="color: white; text-decoration: none;">
+                <button class="btn btn-primary mt-5 mb-5">Torna alla Home</button>
+            </a>
 
-            <button class="btn btn-primary mt-5 mb-5">
-                <a href="{{ route('comics.index') }}" style="color: white; text-decoration: none;">Torna alla Home</a>
-            </button>
+            <a href="{{ route('comics.edit', $comic->id) }}">
+                <button class="btn btn-primary">Modifica fumetto</button>
+            </a>
+
         </div>
     </main>
 @endsection

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="form-text">
-                        Modifica un fumetto
+                        Modifica un fumetto: {{ $comic->title }}
                     </h1>
                 </div>
                 <form action="{{ route('comics.update', $comic->id) }}" method="POST">

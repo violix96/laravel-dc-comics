@@ -8,8 +8,9 @@
         <img class="jumbo" src="{{ Vite::asset('resources/img/jumbo.jpg') }}" alt="Logo">
 
         <div class="container d-flex justify-content-center">
-            <button class="btn btn-primary mt-2 mb-2"><a href="{{ route('comics.create') }}">Aggiungi un nuovo
-                    fumetto</a></button>
+            <a class="mt-3 mb-3" href="{{ route('comics.create') }}"><button class="btn btn-primary">
+                    Aggiungi un nuovo fumetto
+                </button></a>
         </div>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-4">
@@ -22,9 +23,11 @@
                                 {{-- <div class="card-img-overlay d-flex flex-column justify-content-end">
                                 </div> --}}
                                 <h5 class="card-title">{{ $comic->title }}</h5>
-                                <button class="btn btn-primary"><a
-                                        href="{{ route('comics.edit', $comic->id) }}">Modifica</a></button>
-
+                            </a>
+                            <a href="{{ route('comics.edit', $comic->id) }}">
+                                <button class="btn btn-primary">
+                                    Modifica
+                                </button>
                             </a>
                         </div>
                     </div>
