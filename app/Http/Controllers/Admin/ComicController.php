@@ -82,6 +82,7 @@ class ComicController extends Controller
 
         $comic = Comic::findOrFail($id);
 
+
         // metodo 1:
 
         // $data = $request->all();

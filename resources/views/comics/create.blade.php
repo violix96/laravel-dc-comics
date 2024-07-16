@@ -4,6 +4,7 @@
 @endsection
 @section('form')
     <main>
+
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
@@ -12,6 +13,15 @@
                     </h1>
                 </div>
                 <form action="{{ route('comics.store') }}" method="POST">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     @csrf
                     <div class="row">
                         <div class="col-6">
