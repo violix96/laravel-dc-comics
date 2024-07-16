@@ -8,9 +8,9 @@
     <main>
         <img class="jumbo w-100 mb-4" src="{{ Vite::asset('resources/img/jumbo.jpg') }}" alt="Logo">
 
-        <div class="container text-center">
+        <div class="container text-center position-relative">
             <a class="" href="{{ route('comics.create') }}">
-                <button class="btn btn-primary btn-lg mb-3 mt-3">
+                <button class="btn btn-primary btn-lg mb-3 mt-3 top position-absolute">
                     Aggiungi un nuovo fumetto
                 </button>
             </a>

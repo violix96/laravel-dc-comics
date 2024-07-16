@@ -5,6 +5,7 @@
 @section('show')
     <main>
 
+
         <div class="container">
             <div class="row">
                 <h1 class="title-show">Titolo: {{ $comic->title }}</h1>
@@ -36,14 +37,16 @@
             </div>
 
 
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <a class="px-3" href="{{ route('comics.index') }}" style="color: white; text-decoration: none;">
+                    <button class="btn btn-primary mt-5 mb-5">Torna alla Home</button>
+                </a>
 
-            <a href="{{ route('comics.index') }}" style="color: white; text-decoration: none;">
-                <button class="btn btn-primary mt-5 mb-5">Torna alla Home</button>
-            </a>
+                <a class="px-3" href="{{ route('comics.edit', $comic->id) }}">
+                    <button class="btn btn-primary">Modifica fumetto</button>
+                </a>
+            </div>
 
-            <a href="{{ route('comics.edit', $comic->id) }}">
-                <button class="btn btn-primary">Modifica fumetto</button>
-            </a>
 
         </div>
     </main>

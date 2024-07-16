@@ -69,9 +69,11 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary">Modifica fumetto</button>
-                    <div class="my-5">
-                        <a class="btn btn-primary text-white" href="{{ route('comics.index') }}">Torna alla Home</a>
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <button class="btn btn-primary">Modifica fumetto</button>
+                        <div class="my-5 px-3">
+                            <a class="btn btn-primary text-white" href="{{ route('comics.index') }}">Torna alla Home</a>
+                        </div>
                     </div>
                 </form>
             </div>

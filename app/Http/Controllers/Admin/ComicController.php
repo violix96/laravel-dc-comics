@@ -39,18 +39,18 @@ class ComicController extends Controller
         $data = $request->all();
 
 
-        $_comic = new Comic();
+        $new_comic = new Comic();
 
-        $_comic->title = $data['title'];
-        $_comic->description = $data['description'];
-        $_comic->thumb = $data['thumb'];
-        $_comic->price = $data['price'];
-        $_comic->series = $data['series'];
-        $_comic->sale_date = $data['sale_date'];
-        $_comic->type = $data['type'];
-        $_comic->artists = json_encode(explode(',', $data['artists']));
-        $_comic->writers = json_encode(explode(',', $data['writers']));
-        $_comic->save();
+        $new_comic->title = $data['title'];
+        $new_comic->description = $data['description'];
+        $new_comic->thumb = $data['thumb'];
+        $new_comic->price = $data['price'];
+        $new_comic->series = $data['series'];
+        $new_comic->sale_date = $data['sale_date'];
+        $new_comic->type = $data['type'];
+        $new_comic->artists = json_encode(explode(',', $data['artists']));
+        $new_comic->writers = json_encode(explode(',', $data['writers']));
+        $new_comic->save();
 
         return redirect()->route('comics.index');
     }
@@ -107,6 +107,8 @@ class ComicController extends Controller
 
 
         // dd($data, $comic);
+
+
 
         // metodo 2:
         $data = $request->all();

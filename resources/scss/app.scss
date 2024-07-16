@@ -22,12 +22,9 @@ a {
     object-fit: cover;
 }
 
-main {
-    background-color: #1C1C1C;
-}
 
 footer {
-    background-color: blue;
+    background-color: #d41c63;
 }
 
 .text-e {
@@ -58,4 +55,17 @@ footer {
 
 .bottom-card {
     background-color: rgb(238, 181, 25);
+}
+
+.position-absolute {
+    bottom: -12px;
+    right: 18px
+}
+
+main {
+    background-color: #0A0D2F;
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+    display: block;
 }
