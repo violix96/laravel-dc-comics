@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use App\Http\Requests\StorePostRequest;
 use Illuminate\Database\Eloquent\Model;
 
 class ComicController extends Controller
@@ -30,8 +31,11 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
+
+        $data = $request->validated();
+
         $data = $request->all();
 
 
