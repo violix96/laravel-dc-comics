@@ -28,7 +28,7 @@
                                     <h5 class="card-title">{{ $comic->title }}</h5>
                                 </div>
                             </a>
-                            <div class="card-footer mt-auto d-flex justify-content-between">
+                            <div class="card-footer mt-auto d-flex justify-content-between bottom-card">
                                 <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary btn-sm">Modifica</a>
                                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="d-inline">
                                     @csrf
