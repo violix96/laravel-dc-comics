@@ -5,7 +5,7 @@
 @section('show')
     <main>
 
-        <div class="container mt-5">
+        <div class="container">
             <div class="row">
                 <h1 class="title-show">Titolo: {{ $comic->title }}</h1>
                 <div class="col-6 d-flex align-items-center justify-content-center">

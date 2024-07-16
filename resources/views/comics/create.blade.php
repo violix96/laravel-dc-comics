@@ -7,7 +7,7 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="form-text">
+                    <h1 class="text-e">
                         Inserisci un nuovo fumetto
                     </h1>
                 </div>
@@ -16,45 +16,44 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Nome
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Nome
                                     fumetto</label>
                                 <input type="text" class="form-control" name="title">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1"
-                                    class="form-label">Descrizione</label>
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Descrizione</label>
                                 <input type="text" class="form-control" name="description">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Inserisci
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Inserisci
                                     immagine</label>
                                 <input type="text" class="form-control" name="thumb">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Prezzo</label>
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Prezzo</label>
                                 <input type="text" class="form-control" name="price">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Serie</label>
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Serie</label>
                                 <input type="text" class="form-control" name="series">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Data di
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Data di
                                     vendita</label>
                                 <input type="date" class="form-control" name="sale_date">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Genere</label>
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Genere</label>
                                 <input type="text" class="form-control" name="type">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Autori</label>
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Autori</label>
                                 <input type="text" class="form-control" name="artists">
                             </div>
                             <div class="mb-3">
-                                <label class="form-text" for="exampleFormControlInput1" class="form-label">Scrittori</label>
+                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Scrittori</label>
                                 <input type="text" class="form-control" name="writers">
                             </div>
                         </div>
