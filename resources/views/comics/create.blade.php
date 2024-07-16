@@ -13,7 +13,7 @@
                     </h1>
                 </div>
                 <form action="{{ route('comics.store') }}" method="POST">
-                    @if ($errors->any())
+                    {{-- @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
                                 @foreach ($errors->all() as $error)
@@ -21,14 +21,17 @@
                                 @endforeach
                             </ul>
                         </div>
-                    @endif
+                    @endif --}}
                     @csrf
                     <div class="row">
                         <div class="col-6">
                             <div class="mb-3">
-                                <label class="text-e" for="exampleFormControlInput1" class="form-label">Nome
-                                    fumetto</label>
-                                <input type="text" class="form-control" name="title">
+                                <label class="text-e" for="title" class="form-label">Nome fumetto</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                    id="title" name="title" value="{{ old('title') }}">
+                                @error('title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="text-e" for="exampleFormControlInput1" class="form-label">Descrizione</label>
@@ -36,8 +39,12 @@
                             </div>
                             <div class="mb-3">
                                 <label class="text-e" for="exampleFormControlInput1" class="form-label">Inserisci
-                                    immagine</label>
-                                <input type="text" class="form-control" name="thumb">
+                                    URL immagine</label>
+                                <input type="text" class="form-control @error('thumb') is-invalid @enderror"
+                                    name="thumb" value="{{ old('thumb') }}">
+                                @error('thumb')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="text-e" for="exampleFormControlInput1" class="form-label">Prezzo</label>
