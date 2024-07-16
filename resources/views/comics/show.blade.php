@@ -8,16 +8,16 @@
 
         <div class="container">
             <div class="row">
-                <h1 class="title-show">Titolo: {{ $comic->title }}</h1>
+                <h1 class="title-show mb-5">Titolo: {{ $comic->title }}</h1>
                 <div class="col-6 d-flex align-items-center justify-content-center">
                     <div class="img-container">
                         <img class="img" src="{{ $comic->thumb }}" alt="Card image cap">
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $comic->title }}</h5>
+                    <div>
+                        <div class="card-body show-text">
+                            <h5 class="card-title py-2">{{ $comic->title }}</h5>
                             <p class="card-text">{{ $comic->description }}</p>
                             <p class="card-text">Prezzo: {{ $comic->price }}</p>
                             <p class="card-text">{{ $comic->series }}</p>
